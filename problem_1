@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+#define ll long long int
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+
+    string a; cin>>a;
+    ll b; cin>>b;
+    string c;
+    sort(all(a));
+    ll n=a.size();
+    ll m = floor(log10(abs(b))) + 1;
+
+    string temp=a;
+    sort(all_rev(temp));
+    if(n!=m){
+    cout<<temp;
+    }
+    else{
+    for(ll i=0;i<n;i++){
+        for(ll j=i+1;j<n;j++){
+            c=a;
+
+            swap(c[i],c[j]);
+            if(stoll(c)>stoll(a) && stoll(c)<=b)
+            swap(a[i],a[j]);
+        }
+    }
+    cout<<a;
+    }
+
+
+    return 0;
+}
