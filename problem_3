@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int b,c,f,h,p,t;
+	int main()
+	{
+	    for(cin>>t;t--;h>c?swap(p,f),swap(h,c),0:0,
+	    cout<<(2*(p+f)>b?2*f>b?b/2*c:f*c+(b-2*f)/2*h:p*h+f*c)<<endl)
+	    cin>>b>>p>>f>>h>>c;
+	    return 0;
+	}
